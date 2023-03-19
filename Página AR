@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mi experiencia de realidad aumentada con A-Frame y AR.js</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body>
+    <a-scene embedded arjs>
+      <img id="customMarker" src="./pattern-marker.patt" style="display:none">
+      <a-marker preset="custom" type="pattern" url="#customMarker" scale="2 2 2">
+        <a-entity position="0 0 0">
+          <a-sphere radius="0.5" color="#FF0000"></a-sphere>
+        </a-entity>
+      </a-marker>
+      <a-entity camera look-controls-enabled="false"></a-entity>
+    </a-scene>
+  </body>
+</html>
